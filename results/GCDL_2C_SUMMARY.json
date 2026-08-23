@@ -1,0 +1,12 @@
+{
+  "verdict": "SPLIT / CONDITIONAL PHYSICAL-SADDLE PASS under Hamiltonian/Dirac (KLT-class) contour; LRT contour/formulation caveat retained",
+  "physical_negative_modes_primary_resolved": 1,
+  "phase_negative_modes": 0,
+  "phase_zero_modes_internal_U1": 1,
+  "higher_ell_negative_modes_resolved": 0,
+  "l1_entropy_negative_modes_resolved": 0,
+  "Q_KLT_min_worst_resolved": 0.9999264711159381,
+  "nonminimal_QE_min_quarter_stability": 0.9999992634434839,
+  "primitive_count_continuous": 4,
+  "discrete_source_law_selector": 1
+}

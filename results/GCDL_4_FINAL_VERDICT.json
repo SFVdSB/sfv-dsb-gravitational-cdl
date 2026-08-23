@@ -1,0 +1,16 @@
+{
+  "checkpoint": "GCDL-4",
+  "formal_classification": "G-C",
+  "formal_label": "COMPLETE CONDITIONAL GRAVITATIONAL O(4)/CDL THEORY / ABSOLUTE NORMALIZATION NO-PASS",
+  "conditional_dynamical_completion": true,
+  "full_fp_gravity_closure": false,
+  "absolute_de_bridge": false,
+  "surviving_continuous_primitives": ["kappa=M_*^2/F^2", "C", "xi_P", "xi_q"],
+  "surviving_continuous_primitive_count": 4,
+  "surviving_discrete_source_law_selectors": 1,
+  "physical_saddle_contour": "Hamiltonian/Dirac KLT-class reduced contour",
+  "euclidean_contour_ambiguity_retained": true,
+  "minimal_C0_kappa_HM": 4067.441310613605,
+  "particle_dump_derived": false,
+  "program_status": "COMPLETE"
+}

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the Zenodo record and manuscript."
+title: "Gravitational Completion of the Corrected SFV/dSB O(4) Bounce: A Conditional Two-Field Coleman–De Luccia Theory"
+type: software
+authors:
+  - family-names: Hoffmann
+    given-names: Steven
+version: "1.0.0"
+date-released: "2026-08-23"
+repository-code: "https://github.com/SFVdSB/sfv-dsb-gravitational-cdl"
+doi: "10.5281/zenodo.22070942"
+keywords:
+  - SFV/dSB
+  - Coleman-De Luccia
+  - O(4) bounce
+  - false vacuum decay
+  - gravitational instanton
+  - Hawking-Moss
+  - scalar-tensor gravity
