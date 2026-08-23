@@ -1,0 +1,210 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{longtable}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={Gravitational Completion of the Corrected SFV/dSB O(4) Bounce},
+  pdfauthor={Steven Hoffmann}
+}
+
+\title{\textbf{Gravitational Completion of the Corrected SFV/dSB $O(4)$ Bounce:}\\
+A Conditional Two-Field Coleman--De Luccia Theory}
+\author{Steven Hoffmann\\Independent Researcher}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a gravitational completion of a corrected two-field $O(4)$ Euclidean tunneling saddle used in the SFV/dSB program.  The flat-background anchor is a numerically reproduced, vacuum-subtracted bounce with action $B_{\rm flat}=1074.0283785$, peak radius $R_{\rm peak}=5.8601977$, full-width at half maximum $w_{\rm FWHM}=1.7517900$, and exactly one physical scalar negative mode.  We promote this anchor to a leading two-derivative scalar--tensor Coleman--De Luccia (CDL) theory with Jordan-frame coupling
+\[
+\mathcal A(P,q)=\kappa+\xi_P P^2+\xi_q q^2,\qquad W(P,q)=V(P,q)+C.
+\]
+The exact coupled $O(4)$ Einstein--scalar equations, Hamiltonian constraint, pole expansions, curved-vacuum equations, Hawking--Moss (HM) criterion, regulated actions, and Lorentzian continuation are derived without selecting the gravitational Wilson coefficients.  Independent numerical methods reproduce a continuous primary gravitating branch and its weak-gravity limit.  In the minimal compact slice $C=\xi_P=\xi_q=0$, the primary CDL branch is action-dominant over the tested regular competitors and merges continuously with the HM saddle at
+$\kappa_{\rm HM}=4067.4413106$.  For example, at $\kappa=6000$,
+$B_{\rm CDL}=291.8419146 < B_{\rm HM}=296.8516313$.
+Under an explicitly declared Hamiltonian/Dirac reduced Euclidean contour, the primary branch has one resolved physical homogeneous negative mode, positive tested higher-angular sectors, and an exact internal $U(1)_\Phi$ phase zero mode.  Lorentzian continuation gives an open-FRW bubble interior and the complementary thick $dS_3$ wall worldvolume.
+
+The result is a \emph{complete conditional gravitational O(4)/CDL theory}, not a first-principles selection of a unique physical gravitational point.  Four continuous leading-order gravitational primitives,
+$\{\kappa,C,\xi_P,\xi_q\}$, and one discrete source-law choice remain external, and the Euclidean negative-mode statement retains the standard contour/formulation caveat.  Consequently, this work establishes a reusable gravitational tunneling foundation but does not by itself derive an absolute dark-energy normalization.
+\end{abstract}
+
+\section{Introduction}
+
+False-vacuum decay in relativistic field theory is governed semiclassically by Euclidean bounce solutions \cite{Coleman1977,CallanColeman1977}. Coleman and De Luccia (CDL) showed that gravity changes both the existence and the action of such tunneling saddles \cite{ColemanDeLuccia1980}; in sufficiently curved regimes, the homogeneous Hawking--Moss (HM) saddle can become relevant \cite{HawkingMoss1982}. The gravitational fluctuation problem is subtler than its flat-space counterpart because scalar and metric perturbations are constrained, and the number and interpretation of Euclidean negative modes can depend on the reduction and contour used \cite{LRT1985,TanakaSasaki1992,KLT2000,Lavrelashvili2006}.
+
+The present work concerns a specific two-field tunneling system developed in the SFV/dSB program. A corrected flat-background $O(4)$ solution was subjected to independent numerical reproduction, fluctuation-spectrum analysis, and competing-saddle searches before gravity was promoted to a dynamical variable. That corrected background has also been used as a frozen input in a separate quark-flavor construction \cite{HoffmannPhaseB2}. The purpose of this paper is narrower and more foundational: to provide the corrected $O(4)$ sector with a self-consistent scalar--tensor gravitational completion and to state precisely what is and is not fixed by that completion.
+
+The main conclusion is deliberately conditional. For a specified leading scalar--tensor action and supplied gravitational Wilson coefficients, the full Euclidean background, action, physical reduced spectrum, CDL/HM phase boundary, and Lorentzian continuation are calculable and internally consistent. The analysis does not derive the absolute Planck/material ratio, the gravitational vacuum-energy reference, or the finite nonminimal curvature coefficients. Those quantities therefore remain explicit primitives rather than being tuned to a desired cosmological observable.
+
+\section{Corrected flat $O(4)$ anchor}
+
+\subsection{Two-field potential}
+
+Let $X=(P,q)$ and use dimensionless coordinates in units of the common scalar scale $F$. The frozen flat-space Euclidean action is
+\begin{equation}
+S_E^{(0)}=2\pi^2\int_0^\infty dr\,r^3\left[\frac12(P'^2+q'^2)+V(P,q)-V_F\right],
+\end{equation}
+with
+\begin{equation}
+V(P,q)=\frac{\lambda_B}{4}(P^2-\rho^2)^2+bP^2+\frac{\lambda}{4}(q^2-1)^2-\mu^2q^2+gP^2q^2,
+\end{equation}
+and coefficients
+\begin{equation}
+\lambda_B=0.1,\quad \lambda=\mu^2=10^{-8},\quad g=2.313019,\quad \rho=\frac{33}{14},\quad b=-\frac94\frac{\lambda}{\rho^2}.
+\end{equation}
+
+The selected false branch is $X_F=(0,-\sqrt 3)$, with positive Hessian eigenvalues $m_q^2=6.0\times10^{-8}$ and $m_P^2=13.3225017470$. The positive true branch is at $q_T=0$, $P_T=2.3571428743$, and is also locally stable. The potential difference is $\Delta V=V_F-V_T=0.771762416701375>0$.
+
+\subsection{Corrected bounce and hostile reproduction}
+
+The $O(4)$ equations are
+\begin{equation}
+P''+\frac3rP'=V_P,\qquad q''+\frac3rq'=V_q,
+\end{equation}
+with regularity $P'(0)=q'(0)=0$ and false-vacuum decay at large $r$.
+
+Two algorithmically distinct numerical methods reproduced the same nontrivial solution. The high-precision independent result is summarized below:
+\begin{equation}
+P(0)=2.041106525782,\quad q(0)=-2.736228541289\times10^{-7},
+\end{equation}
+\begin{equation}
+B_{\rm flat}=1074.028378518535,\quad R_{\rm peak}=5.860197706763,\quad w_{\rm FWHM}=1.751789986342.
+\end{equation}
+The flat scalar fluctuation problem contains one physical $\ell=0$ negative mode, the four translational zero modes, and one exact normalizable internal $U(1)_\Phi$ phase zero mode. Hostile seed searches found higher radial excitations, but they lie above the canonical branch and possess multiple negative modes; they are therefore not competing decay bounces.
+
+\section{Leading scalar--tensor completion}
+
+We take the leading Euclidean scalar--tensor action
+\begin{equation}
+S_E=\int d^4x\sqrt g\left[-\frac12\mathcal A(P,q)\mathcal R+\frac12(\nabla P)^2+\frac12(\nabla q)^2+W(P,q)\right]+S_{\rm bdy},
+\end{equation}
+where
+\begin{equation}
+\mathcal A(P,q)=\kappa+\xi_P P^2+\xi_q q^2,\qquad W(P,q)=V(P,q)+C,\qquad \kappa=\frac{M_*^2}{F^2}.
+\end{equation}
+At this stage $\{\kappa,C,\xi_P,\xi_q\}$ are retained as four continuous leading-order gravitational primitives. A further discrete choice specifies how the prepared matter sector sources the effective gravitational description. No cosmological observation is used to select these quantities here.
+
+For the $O(4)$ metric $ds_E^2=N(\xi)^2d\xi^2+a(\xi)^2d\Omega_3^2$, the generalized Gibbons--Hawking--York term gives the first-derivative reduced action
+\begin{align}
+S_E=2\pi^2\int d\xi\Bigg\{&a^3\left[\frac{P'^2+q'^2}{2N}+NW\right]-3\mathcal A a\left(\frac{a'^2}{N}+N\right)-\frac{3a^2a'\mathcal A'}{N}\Bigg\}.
+\end{align}
+After variation one may set $N=1$.
+
+\section{Exact coupled Euclidean equations}
+
+Define $\sigma^2=P'^2+q'^2$, $\mathcal A'=2\xi_PPP'+2\xi_q q q'$, and $\mathcal D=\mathcal A+6\xi_P^2P^2+6\xi_q^2q^2$. The scalar equations are
+\begin{align}
+P''+3\frac{a'}aP'&=V_P-\xi_P P\mathcal R,\\
+q''+3\frac{a'}aq'&=V_q-\xi_q q\mathcal R.
+\end{align}
+The lapse equation gives the Hamiltonian constraint
+\begin{equation}
+3\mathcal A\frac{a'^2-1}{a^2}=\frac12\sigma^2-W-3\frac{a'}a\mathcal A'.
+\end{equation}
+A useful algebraic trace closure is
+\begin{equation}
+\mathcal R=\frac{(1+6\xi_P)P'^2+(1+6\xi_q)q'^2+4W+6\xi_PPV_P+6\xi_q qV_q}{\mathcal A+6\xi_P^2P^2+6\xi_q^2q^2}.
+\end{equation}
+The branch controls $\mathcal A>0$ and $\mathcal D\neq0$ are kept explicit.
+
+\section{Gravitating branches and the Hawking--Moss boundary}
+
+Independent numerical methods reproduce a continuous primary gravitating branch and its weak-gravity limit. In the minimal compact slice $C=\xi_P=\xi_q=0$, the primary branch is action-dominant over the tested regular competitors and merges continuously with Hawking--Moss at
+\begin{equation}
+\boxed{\kappa_{\rm HM}=4067.441310613605}.
+\end{equation}
+At $\kappa=6000$, for example,
+\begin{equation}
+B_{\rm CDL}=291.8419146 < B_{\rm HM}=296.8516313.
+\end{equation}
+The weak-gravity limit recovers the corrected flat bounce action.
+
+\section{Physical scalar--metric spectrum}
+
+The scalar--metric fluctuation problem depends on the gravitational reduction/contour. We therefore state the contour explicitly. Under the Hamiltonian/Dirac (KLT-class) reduced contour, the primary homogeneous spectrum contains exactly one resolved negative eigenvalue. Representative values are
+\begin{equation}
+\lambda_0(\kappa=6000)\simeq-0.23156,\qquad \lambda_0(\kappa=10^5)\simeq-0.09812,
+\end{equation}
+approaching the flat control $\lambda_{0,\rm flat}\simeq-0.09787$. The next resolved eigenvalues are positive. Tested $\ell\ge1$ sectors contain no additional negative modes, and the exact global $U(1)_\Phi$ phase mode remains an internal zero mode.
+
+An alternative Lagrangian reduction develops a very narrow interval of negative kinetic prefactor near the equator for some compact solutions. We do not erase this standard Euclidean-gravity contour ambiguity. Consequently, the one-negative-mode claim is conditional on the declared Hamiltonian/Dirac reduced contour.
+
+\section{Lorentzian continuation}
+
+The regular Euclidean cap admits two complementary analytic continuations. Continuation from the true-side Euclidean pole yields an open-FRW interior,
+\begin{equation}
+ds^2=-dt^2+a_L(t)^2\left[d\chi^2+\sinh^2\chi\,d\Omega_2^2\right].
+\end{equation}
+Generic representative primary solutions in the minimal $C=0$ slice begin curvature dominated and do not automatically provide a long scalar-energy-dominated inflationary era. Near the CDL/HM merger, the Euclidean cap begins arbitrarily close to the barrier top; at the bifurcation the regular Lorentzian perturbation is $\delta(t)=\delta_0\cosh(Ht)$ and the residence time grows logarithmically as the cap approaches HM.
+
+The complementary continuation leaves the thick scalar profile static in the normal coordinate $\xi$ while the wall worldvolume is $dS_3$:
+\begin{equation}
+R(T;\xi)=a(\xi)\cosh\!\left(\frac{T}{a(\xi)}\right).
+\end{equation}
+Thus each fixed-$\xi$ layer has intrinsic de Sitter radius $a(\xi)$.
+
+\section{Nonminimal couplings and provenance}
+
+The nonminimal coefficients $\xi_P$ and $\xi_q$ affect the vacuum locations, Einstein-frame barrier geometry, and HM phase boundary. A dedicated one-loop audit derives their ordinary renormalization-scale running and mixing, but not their finite renormalized boundary values. Numerically observed HM endpoints are therefore not used to infer or tune $\xi_q$.
+
+\section{Absolute scale and claim boundary}
+
+The completed theory does not independently fix $\kappa=M_*^2/F^2$, nor does it fix the absolute vacuum identity $C$, the finite $\xi_i$, or the discrete source law. Hence the false- and true-vacuum curvature scales remain conditional on external gravitational information. In particular, this paper does not derive an absolute dark-energy density.
+
+The formal classification is therefore
+\begin{center}
+\boxed{\text{complete conditional gravitational $O(4)$/CDL theory}}
+\end{center}
+rather than a unique first-principles gravitational cosmology.
+
+\section{Relation to later SFV/dSB sectors}
+
+The corrected flat bounce is already used as a frozen input in the separately published Phase B2 quark-flavor construction \cite{HoffmannPhaseB2}. The present gravitational completion should be regarded as the standalone foundation for future cosmological applications.
+
+No late-time holographic dark-energy mechanism is assumed or tested in this paper. In particular, the later distinction between an early $dS_3$ wall interpretation and a late emergent $3+1$ holographic geometry belongs to a separate cosmological publication.
+
+\section{Reproducibility}
+
+The accompanying repository contains publication metadata, claim boundaries, the manuscript source, frozen machine-readable summary files, and the final consistency script. The complete curated release with full checkpoint derivations, numerical ledgers, figures, and reproduction scripts is archived on Zenodo at DOI \href{https://doi.org/10.5281/zenodo.22070942}{10.5281/zenodo.22070942}.
+
+\section{Conclusion}
+
+A previously corrected and hostile-validated two-field $O(4)$ scalar bounce has been promoted to a self-consistent leading scalar--tensor Coleman--De Luccia theory. The exact coupled Euclidean equations and constraints are derived; independent numerical methods reproduce regular gravitating branches and the weak-gravity flat limit; the primary branch is action-dominant over tested competitors and merges with Hawking--Moss at a calculable phase boundary; and under an explicitly declared Hamiltonian/Dirac reduced contour it possesses exactly one resolved physical tunneling negative mode. The Euclidean cap prepares both an open-FRW interior and a complementary thick $dS_3$ wall continuation.
+
+The remaining uncertainty is not dynamical but foundational: four continuous leading gravitational coefficients and one discrete gravity-source-law choice are not selected from the current microscopic action. The result should therefore be used as a conditional gravitational foundation, not as a claim of unique absolute cosmological normalization.
+
+\section*{Data and code availability}
+
+The complete publication archive is available at \href{https://doi.org/10.5281/zenodo.22070942}{doi:10.5281/zenodo.22070942}. The GitHub repository provides the source-oriented publication tree and frozen claim/verdict files.
+
+\section*{Competing interests}
+
+The author declares no competing interests.
+
+\begin{thebibliography}{99}
+\bibitem{Coleman1977} S.~Coleman, ``The Fate of the False Vacuum. 1. Semiclassical Theory,'' Phys. Rev. D \textbf{15}, 2929 (1977); Erratum Phys. Rev. D \textbf{16}, 1248 (1977). doi:10.1103/PhysRevD.15.2929.
+\bibitem{CallanColeman1977} C.~G.~Callan Jr. and S.~Coleman, ``The Fate of the False Vacuum. 2. First Quantum Corrections,'' Phys. Rev. D \textbf{16}, 1762 (1977). doi:10.1103/PhysRevD.16.1762.
+\bibitem{ColemanDeLuccia1980} S.~Coleman and F.~De Luccia, ``Gravitational effects on and of vacuum decay,'' Phys. Rev. D \textbf{21}, 3305 (1980). doi:10.1103/PhysRevD.21.3305.
+\bibitem{HawkingMoss1982} S.~W.~Hawking and I.~G.~Moss, ``Supercooled phase transitions in the very early universe,'' Phys. Lett. B \textbf{110}, 35--38 (1982). doi:10.1016/0370-2693(82)90946-7.
+\bibitem{LRT1985} G.~V.~Lavrelashvili, V.~A.~Rubakov, and P.~G.~Tinyakov, ``Tunneling transitions with gravitation: Breakdown of the quasiclassical approximation,'' Phys. Lett. B \textbf{161}, 280--284 (1985). doi:10.1016/0370-2693(85)90761-0.
+\bibitem{TanakaSasaki1992} T.~Tanaka and M.~Sasaki, ``False Vacuum Decay with Gravity: Negative Mode Problem,'' Prog. Theor. Phys. \textbf{88}, 503--528 (1992). doi:10.1143/PTP.88.503.
+\bibitem{KLT2000} A.~Khvedelidze, G.~Lavrelashvili, and T.~Tanaka, ``Cosmological perturbations in a Friedmann--Robertson--Walker model with a scalar field and false vacuum decay,'' Phys. Rev. D \textbf{62}, 083501 (2000). doi:10.1103/PhysRevD.62.083501.
+\bibitem{Lavrelashvili2006} G.~Lavrelashvili, ``Number of negative modes of the oscillating bounces,'' Phys. Rev. D \textbf{73}, 083513 (2006). doi:10.1103/PhysRevD.73.083513.
+\bibitem{HoffmannPhaseB2} S.~Hoffmann, ``Pati--Salam Seed Multiplicity and a Constrained Internal-Response Metric for Quark Flavor in SFV/dSB: Phase B2 v1.7.0,'' Zenodo (2026), doi:10.5281/zenodo.22059294.
+\end{thebibliography}
+\end{document}
