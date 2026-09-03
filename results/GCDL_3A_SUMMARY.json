@@ -4,5 +4,7 @@
   "wall": "complementary continuation gives a static thick profile in dS3 slicing; each fixed-xi layer has areal radius R(T)=a(xi) cosh[T/a(xi)]",
   "minimal_C0_result": "resolved representative primary interiors are curvature dominated and do not exhibit scalar-energy-dominated inflation; initial positive acceleration is brief and curvature dominated",
   "near_HM_result": "arbitrarily near the CDL/HM merger the cap starts arbitrarily close to the hilltop; at the bifurcation delta=delta0 cosh(Ht), so potential domination and a sustained open-inflation epoch are mathematically possible and its duration grows as the endpoint is approached",
-  "primitive_count_continuous": 4
+  "asymptotic_selector": "sign of Einstein-frame true-vacuum potential U_E,T fixes dS/Minkowski/AdS; C=0 minimal true vacuum is slightly AdS",
+  "primitive_count_continuous": 4,
+  "next_checkpoint": "GCDL-3Axi — Nonminimal-curvature provenance gate"
 }

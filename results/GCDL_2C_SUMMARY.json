@@ -7,6 +7,8 @@
   "l1_entropy_negative_modes_resolved": 0,
   "Q_KLT_min_worst_resolved": 0.9999264711159381,
   "nonminimal_QE_min_quarter_stability": 0.9999992634434839,
+  "LRT_note": "Q_LRT is slightly negative in an ultra-narrow interval at the compact equator; the associated extra-mode issue is formulation/contour dependent in Euclidean gravity literature and is not erased.",
   "primitive_count_continuous": 4,
-  "discrete_source_law_selector": 1
+  "discrete_source_law_selector": 1,
+  "next_checkpoint": "GCDL-3A — Lorentzian continuation and interior cosmological background"
 }

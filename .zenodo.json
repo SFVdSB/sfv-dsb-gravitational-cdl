@@ -2,10 +2,29 @@
   "title": "Gravitational Completion of the Corrected SFV/dSB O(4) Bounce: A Conditional Two-Field Coleman–De Luccia Theory",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "creators": [{"name": "Hoffmann, Steven"}],
+  "creators": [
+    {
+      "name": "Hoffmann, Steven"
+    }
+  ],
   "description": "A reproducible gravitational completion of the corrected two-field SFV/dSB O(4) Euclidean tunneling saddle. The release derives the leading scalar–tensor O(4) Einstein–scalar boundary-value problem, independently reproduces regular gravitating CDL branches, maps action ordering and the CDL/Hawking–Moss merger, audits the constrained scalar–metric fluctuation spectrum, and provides Lorentzian open-FRW and thick-dS3 continuations. The result is explicitly conditional on four unresolved leading gravitational primitives {kappa, C, xi_P, xi_q} and one discrete source-law choice; it does not claim a unique absolute gravitational or dark-energy normalization. Permanent DOI: 10.5281/zenodo.22070942.",
   "version": "v1.0.0",
   "publication_date": "2026-08-23",
-  "keywords": ["SFV/dSB","Coleman-De Luccia","O(4) bounce","false vacuum decay","gravitational instanton","Hawking-Moss","scalar-tensor gravity","reproducible research"],
-  "related_identifiers": [{"identifier":"10.5281/zenodo.22059294","relation":"isSupplementTo","scheme":"doi"}]
+  "keywords": [
+    "SFV/dSB",
+    "Coleman-De Luccia",
+    "O(4) bounce",
+    "false vacuum decay",
+    "gravitational instanton",
+    "Hawking-Moss",
+    "scalar-tensor gravity",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22059294",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ]
 }
